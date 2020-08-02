@@ -1,0 +1,55 @@
+{
+    "name": "ocr-dw-p5-orinoco-frontend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "webpack",
+        "build": "NODE_ENV='production' webpack --config webpack.config.js",
+        "server": "webpack-dev-server --config webpack.config.js",
+        "lint": "eslint --ext js,jsx src",
+        "lint:fix": "eslint --ext js,jsx src --fix",
+        "format": "prettier-eslint --write \"src/**/*.{js}\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/joellesenne/ocr-dw-p5-orinoco-frontend.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/joellesenne/ocr-dw-p5-orinoco-frontend/issues"
+    },
+    "homepage": "https://github.com/joellesenne/ocr-dw-p5-orinoco-frontend#readme",
+    "devDependencies": {
+        "@babel/core": "^7.11.0",
+        "@babel/preset-env": "^7.11.0",
+        "autoprefixer": "^9.8.6",
+        "babel-loader": "^8.1.0",
+        "clean-webpack-plugin": "^3.0.0",
+        "copy-webpack-plugin": "^6.0.3",
+        "css-loader": "^4.2.0",
+        "cssnano": "^4.1.10",
+        "eslint": "^7.6.0",
+        "eslint-config-airbnb": "^18.2.0",
+        "eslint-plugin-import": "^2.22.0",
+        "eslint-plugin-jsx-a11y": "^6.3.1",
+        "eslint-plugin-prettier": "^3.1.4",
+        "eslint-plugin-react": "^7.20.5",
+        "eslint-plugin-react-hooks": "^4.0.8",
+        "html-loader": "^1.1.0",
+        "html-webpack-plugin": "^4.3.0",
+        "mini-css-extract-plugin": "^0.9.0",
+        "postcss-loader": "^3.0.0",
+        "prettier": "^2.0.5",
+        "prettier-eslint": "^11.0.0",
+        "prettier-eslint-cli": "^5.0.0",
+        "sass": "^1.26.10",
+        "sass-loader": "^9.0.2",
+        "webpack": "^4.44.1",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-server": "^3.11.0"
+    }
+}

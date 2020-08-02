@@ -1,0 +1,6 @@
+# http://tools.seobook.com/robots-txt/
+
+User-agent: *
+Disallow: /static/
+
+sitemap: https://joellesenne.github.io/ocr-dw-p5-orinoco/manifest.json
