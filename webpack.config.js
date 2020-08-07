@@ -15,13 +15,13 @@ const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'index_bundle.js',
+    filename: '[name].bundle.js',
   },
   module: {
     rules: [
@@ -54,11 +54,21 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.jpe?g$|\.ico$|\.txt$|\.json$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
+        loader: 'file-loader?name=[name].[ext]'
+      },
+      {
+        test: /\.json$/,
+        exclude: /node_modules/,
+        loader: 'file-loader?name=[name].[ext]',
+        type: 'javascript/auto'
+      },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'app.bundle.css',
+      filename: '[name].bundle.css',
     }),
     new HtmlWebpackPlugin({
       hash: true,
@@ -84,35 +94,17 @@ module.exports = {
       template: './src/confirmation.html',
       filename: './confirmation.html',
     }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/images', to: 'images' },
+        { from: 'src/icons', to: 'icons' },
+      ],
+    }),
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'development', // use 'development' unless process.env.NODE_ENV is defined
       DEBUG: false,
     }),
-    new CopyWebpackPlugin([
-      {
-      from: 'src/favicom.ico',
-      to: '/'
-      },
-      {
-        from: 'src/manifest.json',
-        to: '/'
-      },
-      {
-        from: 'src/robots.txt',
-        to: '/'
-      },
-      {
-        from: 'src/icons/**/*',
-        to: '/icons'
-      },
-      {
-        from: 'src/images/**/*',
-        to: '/images'
-      }
-    ],
-    {
-      copyUnmodified: true
-    }),
+    
   ],
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
 };

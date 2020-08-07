@@ -28,9 +28,9 @@ const items = $('.js-allArticlesByCategory');
 /**
  * @desc Dynamic management for get all articles
  */
-const getAllArticlesData = async () => {
+const getAllArticlesData = () => {
   try {
-    const data = await getRequestQuery('GET', GET_URL);
+    const data = getRequestQuery('GET', GET_URL);
     for (let i = 0; i < data.length; i += 1) {
       items.innerHTML += `<li class="articles__lists--item cards__item">
       <div class="cards__item__thumb">

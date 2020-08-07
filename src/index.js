@@ -11,6 +11,9 @@
  * @load modules APP
  */
 import './sass/app.scss';
+import './favicon.ico';
+import './robots.txt';
+import './manifest.json';
 import { getUserConnect, quantityBasket, getCurrentYear } from './js/allPages';
 import { getAllArticlesData } from './js/allProducts';
 import { getArticleByIdData } from './js/oneProduct';

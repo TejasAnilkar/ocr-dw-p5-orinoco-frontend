@@ -23,8 +23,8 @@ const userConnect = $('.js-userConnect');
 /**
  * @desc Dynamic management for the quantity basket
  */
-const quantityBasket = async () => {
-  const data = await userBasket;
+const quantityBasket = () => {
+  const data = userBasket;
   if (data.length >= 1) {
     quantity.innerHTML = data.length;
   } else {
@@ -35,11 +35,11 @@ const quantityBasket = async () => {
 /**
  * @desc Dynamic management for the current year
  */
-const getCurrentYear = async () => {
+const getCurrentYear = () => {
   const date = new Date().getFullYear('Y');
   const dateFullYear = $('.js-currentYear');
   // eslint-disable-next-line no-return-assign
-  await (dateFullYear.textContent = date);
+  dateFullYear.textContent = datess;
 };
 
 /**

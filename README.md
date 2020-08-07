@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to my <code>Orinoco</code> 👋</h1>
+<h1 align="center">Welcome to my <code>Orinoco Fron-End</code> 👋</h1>
 
 [![GitHub license](https://img.shields.io/badge/Mit-License-blue.svg?style=flat-square)](LICENSE)  ![Maintenance](https://img.shields.io/maintenance/yes/2020.svg?style=flat-square) [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/joellesenne/ocr-dw-p5-orinoco-frontend) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/554dbae558f245cd882888d0d415a482)](https://app.codacy.com/app/joellesenne/ocr-dw-p5-orinoco_2?utm_source=github.com&utm_medium=referral&utm_content=joellesenne/ocr-dw-p5-orinoco-frontend&utm_campaign=Badge_Grade_Dashboard) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
@@ -11,7 +11,7 @@ this is for you to share my code in the world.
 
 👀 \[Looking at my work]
 
-💡 [Template]
+💡 \[Template]
 
 📦 [Git project]
 
@@ -19,8 +19,7 @@ this is for you to share my code in the world.
 
 - Front-End
   - Install JavaScript runtime built [nodejs](https://nodejs.org/en/)
-
-// TODO
+  - Use [WebPack](https://webpack.js.org/) for bundle your projects
 
 - Git
   - [Git](https://git-scm.com/doc) – Learning Git
@@ -37,7 +36,7 @@ this is for you to share my code in the world.
 
 ### Prerequisites
 
-```bach
+```bash
 # Node version
 ~ $ node --version
 
@@ -47,7 +46,7 @@ this is for you to share my code in the world.
 
 ### Installing
 
-```bach
+```bash
 # Clone this repository
 ~ $ git clone https://github.com/joellesenne/ocr-dw-p5-orinoco-frontend.git
 
@@ -72,6 +71,7 @@ this is for you to share my code in the world.
 I am using [Visual Studio Code](https://code.visualstudio.com/)
 
 Open [localhost:8000/](http://localhost:8000/) to browser
+
 🎉 have fun
 
 ## Author
@@ -102,8 +102,8 @@ Copyright © 2020 [Joël Lesenne](https://github.com/joellesenne).
 
 This project is [MIT](LICENSE) licensed.
 
-[Looking at my work]: https://joellesenne.github.io/ocr-dw-p5-orinoco-frontend
+[Looking at my work]: <insert-a-valid-url>
 
-[Template]: https://github.com/joellesenne/starter-kit-development-web
+[Template]: <insert-a-valid-url>
 
 [Git project]: https://github.com/joellesenne/ocr-dw-p5-orinoco-frontend
