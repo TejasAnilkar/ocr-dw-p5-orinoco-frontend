@@ -1,11 +1,12 @@
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable no-console */
 /* eslint-disable no-underscore-dangle */
 /*
   @name : orinoco
   @create : 2020/04/05
   @version : 1.0.0
   @author : François, Joël Lesenne
-  @site : <https://ocr-dw.s3.eu-west-3.amazonaws.com/orinoco/index.html>
-  @depot : <https://github.com/joellesenne/orinoco>
+  @depot : <https://github.com/joellesenne/ocr-dw-p5-orinoco-frontend>
   @licence : MIT <https://mit-license.org/>
 */
 
@@ -56,8 +57,8 @@ const orderPlaced = () => {
       });
     }
   });
-  promise.catch((ex) => {
-    console.log(`Page error orderPlacedJS : ${JSON.stringify(ex)}`);
+  promise.catch((err) => {
+    console.log('Something went wrong', err);
   });
 };
 

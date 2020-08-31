@@ -1,11 +1,12 @@
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable no-console */
 /* eslint-disable no-underscore-dangle */
 /**
  * @name : orinoco
  * @create : 2020/04/05
  * @version : 1.0.0
  * @author : François, Joël Lesenne
- * @site : <https://joellesenne.github.io/ocr-dw-p5-orinoco/index.html>
- * @depot : <https://github.com/joellesenne/ocr-dw-p5-orinoco>
+ * @depot : <https://github.com/joellesenne/ocr-dw-p5-orinoco-frontend>
  * @licence : MIT <https://mit-license.org/>
  */
 
@@ -19,7 +20,7 @@ import { $, userBasket } from './global';
 /**
  * @desc Generate URL API
  */
-const GET_URL = API_URL._HOST + API_URL._DIR + API_URL._CATEGORY;
+const GET_URL = API_URL.HOST + API_URL.DIR + API_URL.CATEGORY;
 
 /**
  * @desc Select elements for the DOM
@@ -58,8 +59,8 @@ const allBasket = () => {
       }
     }
   });
-  promise.catch(() => {
-    console.log('will not execute');
+  promise.catch((err) => {
+    console.log('Something went wrong', err);
   });
 };
 

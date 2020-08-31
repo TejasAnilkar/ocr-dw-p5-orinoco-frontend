@@ -3,8 +3,7 @@
  * @create : 2020/04/05
  * @version : 1.0.0
  * @author : François, Joël Lesenne
- * @site : <https://joellesenne.github.io/ocr-dw-p5-orinoco/index.html>
- * @depot : <https://github.com/joellesenne/ocr-dw-p5-orinoco>
+ * @depot : <https://github.com/joellesenne/ocr-dw-p5-orinoco-frontend>
  * @licence : MIT <https://mit-license.org/>
  */
 
@@ -39,11 +38,11 @@ const USERS = {
  * @desc Generate URL API
  */
 const API_URL = {
-  _HOST: 'http://localhost:3000/',
-  _DIR: 'api/',
-  _CATEGORY: categories.cat1,
-  _ID: ID_URL,
-  _ORDER: 'order',
+  HOST: 'http://localhost:3000/',
+  DIR: 'api/',
+  CATEGORY: categories.cat1,
+  ID: ID_URL,
+  ORDER: 'order',
 };
 
 const ORDER_ID = Math.round(Math.random() * 9654782366987);

@@ -1,17 +1,19 @@
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable no-console */
 /* eslint-disable no-underscore-dangle */
 /**
  * @name : orinoco
  * @create : 2020/04/05
  * @version : 1.0.0
  * @author : François, Joël Lesenne
- * @site : <https://ocr-dw.s3.eu-west-3.amazonaws.com/orinoco/index.html>
- * @depot : <https://github.com/joellesenne/orinoco>
+ * @depot : <https://github.com/joellesenne/ocr-dw-p5-orinoco-frontend>
  * @licence : MIT <https://mit-license.org/>
  */
 
 /**
- * @load modules dependencies
+ * @load modules APP
  */
+
 import { getRequestQuery } from './makeRequestQuery';
 import { API_URL } from './config';
 import { $, $$, userBasket } from './global';
@@ -19,8 +21,8 @@ import { $, $$, userBasket } from './global';
 /**
  * @desc Generate URL API
  */
-const GET_URL = `${API_URL._HOST + API_URL._DIR + API_URL._CATEGORY}/${
-  API_URL._ID
+const GET_URL = `${API_URL.HOST + API_URL.DIR + API_URL.CATEGORY}/${
+  API_URL.ID
 }`;
 
 /**
@@ -68,7 +70,7 @@ const getArticleByIdData = () => {
       const option = $$('option');
       option.setAttribute(
         'class',
-        'card__form__select--option js-selectOption',
+        'card__form__select--option js-selectOption'
       );
       option.value = data.lenses[i];
       option.innerHTML = data.lenses[i];
@@ -146,8 +148,10 @@ const getArticleByIdData = () => {
       }
     });
   });
-  promise.catch((ex) => {
-    console.log('will not execute');
+  promise.catch((err) => {
+    // throw new Error(err);
+    // or console.log('will not execute');
+    console.log('Something went wrong', err);
   });
 };
 

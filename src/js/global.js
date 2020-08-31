@@ -1,10 +1,10 @@
+/* eslint-disable no-console */
 /**
  * @name : orinoco
  * @create : 2020/04/05
  * @version : 1.0.0
  * @author : François, Joël Lesenne
- * @site : <https://joellesenne.github.io/ocr-dw-p5-orinoco/index.html>
- * @depot : <https://github.com/joellesenne/ocr-dw-p5-orinoco>
+ * @depot : <https://github.com/joellesenne/ocr-dw-p5-orinoco-frontend>
  * @licence : MIT <https://mit-license.org/>
  */
 

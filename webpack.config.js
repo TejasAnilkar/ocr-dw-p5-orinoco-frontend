@@ -4,7 +4,7 @@
  * @create : 2020/04/05
  * @version : 1.0.0
  * @author : François, Joël Lesenne
- * @depot : <https://github.com/joellesenne/ocr-dw-p5-orinoco-frontend.>
+ * @depot : <https://github.com/joellesenne/ocr-dw-p5-orinoco-frontend>
  * Licence : MIT <https://mit-license.org/>
  */
 
@@ -56,13 +56,13 @@ module.exports = {
       },
       {
         test: /\.jpe?g$|\.ico$|\.txt$|\.json$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
-        loader: 'file-loader?name=[name].[ext]'
+        loader: 'file-loader?name=[name].[ext]',
       },
       {
         test: /\.json$/,
         exclude: /node_modules/,
         loader: 'file-loader?name=[name].[ext]',
-        type: 'javascript/auto'
+        type: 'javascript/auto',
       },
     ],
   },
@@ -104,7 +104,6 @@ module.exports = {
       NODE_ENV: 'development', // use 'development' unless process.env.NODE_ENV is defined
       DEBUG: false,
     }),
-    
   ],
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
 };

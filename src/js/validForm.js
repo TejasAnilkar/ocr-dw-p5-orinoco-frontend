@@ -1,11 +1,11 @@
+/* eslint-disable no-console */
 /* eslint-disable camelcase */
 /**
  * @name : orinoco
  * @create : 2020/04/05
  * @version : 1.0.0
  * @author : François, Joël Lesenne
- * @site : <https://ocr-dw.s3.eu-west-3.amazonaws.com/orinoco/index.html>
- * @depot : <https://github.com/joellesenne/orinoco>
+ * @depot : <https://github.com/joellesenne/ocr-dw-p5-orinoco-frontend>
  * Licence : MIT <https://mit-license.org/>
  */
 
@@ -19,13 +19,13 @@ import { $, userBasket, confirmShoppingCart } from './global';
 /**
  * @desc Generate URL API
  */
-const POST_URL = `${API_URL._HOST + API_URL._DIR + API_URL._CATEGORY}/${
-  API_URL._ORDER
+const POST_URL = `${API_URL.HOST + API_URL.DIR + API_URL.CATEGORY}/${
+  API_URL.ORDER
 }`;
 console.log(`POST_URL :${POST_URL}`);
 
 /**
- * @desc Select elements for DOM
+ * @desc Select elements for the DOM
  */
 const familyName = $('.js-familyName');
 const givenName = $('.js-givenName');
@@ -99,10 +99,13 @@ const createOrder = () => {
   const promise = postRequestQuery('POST', POST_URL);
   promise.then((data) => {
     console.log(`data 'POST' ? ${data}`);
+    const myOrder = JSON.stringify(confirmShoppingCart);
+    console.log(`My ORDER : ${myOrder}`);
     // TODO request POST
   });
-  promise.catch((ex) => {
-    console.error(`Page error validFormJS : ${JSON.stringify(ex)}`);
+  promise.push(confirmShoppingCart);
+  promise.catch((err) => {
+    console.log('Something went wrong', err);
   });
 };
 

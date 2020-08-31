@@ -1,89 +1,88 @@
+/* eslint-disable func-names */
+/* eslint-disable prefer-promise-reject-errors */
 /**
  * @name : orinoco
  * @create : 2020/04/05
  * @version : 1.0.0
  * @author : François, Joël Lesenne
- * @site : <https://ocr-dw.s3.eu-west-3.amazonaws.com/orinoco/index.html>
- * @depot : <https://github.com/joellesenne/orinoco>
+ * @depot : <https://github.com/joellesenne/ocr-dw-p5-orinoco-frontend>
  * @licence : MIT <https://mit-license.org/>
  */
 
 /**
- * @desc Get XHR request with promise <https://gomakethings.com/promise-based-xhr/>
+ * @desc Get xhr request with promise <https://gomakethings.com/promise-based-xhr/>
  *
  * @param {String} URL Request URL
  */
 const getRequestQuery = function (...args) {
-  // Create the XHR request
-  const XHR = new window.XMLHttpRequest();
+  // Create the xhr request
+  const xhr = new XMLHttpRequest();
 
   // Return it as a Promise
   return new Promise((resolve, reject) => {
     // Setup our listener to process completed requests
-    XHR.onreadystatechange = function () {
+    xhr.onreadystatechange = function () {
       // Only run if the request is complete
-      if (XHR.readyState !== 4) return;
+      if (this.readyState !== 4) return;
 
       // Process the response
-      if (XHR.status >= 200 && XHR.status < 300) {
+      if (this.status >= 200 && this.status < 300) {
         // If successful
-        resolve(JSON.parse(XHR.response));
+        resolve(JSON.parse(this.responseText));
       } else {
         // If failed
-        reject(
-          new Error({
-            status: XHR.status,
-            statusText: XHR.statusText,
-          }),
-        );
+        reject({
+          status: this.status,
+          statusText: this.statusText,
+        });
       }
     };
 
     // Setup our HTTP request
-    XHR.open(...args, true);
-    XHR.setRequestHeader('Content-Type', 'application/json');
+    xhr.open(...args, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
     // Send the request
-    XHR.send();
+    xhr.send();
   });
 };
 
 /**
- * @desc Get XHR request with promise <https://gomakethings.com/promise-based-xhr/>
+ * @desc POST xhr request with promise <https://gomakethings.com/promise-based-xhr/>
  *
  * @param {String} URL Request URL
  */
 const postRequestQuery = function (...args) {
   // Create the XHR request
-  const XHR = new window.XMLHttpRequest();
+  const xhr = new window.XMLHttpRequest();
 
   // Return it as a Promise
   return new Promise((resolve, reject) => {
     // Setup our listener to process completed requests
-    XHR.onreadystatechange = function () {
+    xhr.onreadystatechange = function () {
       // Only run if the request is complete
-      if (XHR.readyState !== 4) return;
+      if (this.readyState !== 4) return;
 
       // Process the response
-      if (XHR.status >= 200 && XHR.status < 300) {
+      if (this.status >= 200 && this.status < 300) {
         // If successful
-        resolve(JSON.parse(XHR.response));
+        resolve(JSON.parse(this.response));
       } else {
         // If failed
         reject(
           new Error({
-            status: XHR.status,
-            statusText: XHR.statusText,
-          }),
+            status: this.status,
+            statusText: this.statusText,
+          })
         );
       }
     };
 
     // Setup our HTTP request
-    XHR.open(...args, true);
-    XHR.setRequestHeader('Content-Type', 'application/json');
+    xhr.open(...args, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
     const order = args[args.length - 1];
     // Send the request
-    XHR.send(order);
+    xhr.send(order);
   });
 };
 

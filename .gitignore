@@ -9,3 +9,9 @@ node_modules
 
 # OSX
 .DS_Store
+
+# dist config
+dist
+
+# Eslint cache
+.eslintcache
