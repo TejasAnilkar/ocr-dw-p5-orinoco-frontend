@@ -51,7 +51,7 @@
         "prettier": "2.1.1",
         "prettier-eslint": "11.0.0",
         "prettier-eslint-cli": "5.0.0",
-        "sass": "1.26.10",
+        "sass": "1.26.11",
         "sass-loader": "10.0.2",
         "webpack": "4.44.1",
         "webpack-cli": "3.3.12",
