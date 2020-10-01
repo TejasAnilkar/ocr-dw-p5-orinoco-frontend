@@ -1,4 +1,4 @@
-# Contributing
+# Contributing in your Project
 
 When contributing to this repository, please first discuss the change you wish to make via issue,
 email, or any other method with the owners of this repository before making a change.
@@ -75,7 +75,7 @@ that are not aligned to this Code of Conduct, or to ban temporarily or
 permanently any contributor for other behaviors that they deem inappropriate,
 threatening, offensive, or harmful.
 
-### Scope
+### Future Scope
 
 This Code of Conduct applies both within project spaces and in public spaces
 when an individual is representing the project or its community. Examples of
